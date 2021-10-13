@@ -24,3 +24,15 @@ def contains_hidden(nums, hidden_num):
 
 
 # could also just do "return hidden_num in nums"
+
+# Return the number of times the letter z occurs in the given string.
+# count_z('lazy') → 1
+# count_z('really lazzzy') → 3
+# count_z('') → 0
+
+def count_z(input_str):
+    count = 0
+    for letter in input_str:
+        if letter == "z":
+            count = count + 1
+    return count
