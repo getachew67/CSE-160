@@ -1,0 +1,56 @@
+Name: Agnes Li
+CSE 160
+Homework 2
+
+For each problem that requires a written answer, write (or copy-and-paste)
+your answers in this file.  When you are done, you should have replaced all
+the ellipses (the three dots) with your answers.
+
+At the end, you will turn in this file and your modified
+dna_analysis.py program.
+
+
+Problem 2:
+
+GC-content: 0.4302926296296296
+
+Problem 3:
+
+a) Because gc_count was not initialized before the for loop, it doesn't have any value inside the loop
+and python cannot add +1 to something that isn't a number.
+
+b) Because nucleotides was not defined, there are no values for the for loop to loop through. Defining
+nucleotides connects the for loop to the nucleotidee values in the file.
+
+Problem 4:
+
+GC-content: 0.4302926296296296
+AT-content: 0.5689938518518518
+
+Problem 5:
+
+G-content: 0.21254714814814815
+C-content: 0.21774548148148148
+A-content: 0.2852328518518519
+T-content: 0.283761
+
+Problem 6:
+
+In every sample, the sum of G+C+A+T counts are different from the total count and the length of nucleotides
+but the total count and length of nucleotides are equal to each other in every sample. This is because
+in the data, some of the nucleotides are not G,C,A, or T. There are some other letters such as N or B.
+The GC content should be computed with the sum of G+C+A+T counts in the denominator instead of total_count, 
+since it represents ONLY the number of GCAT nucleotides, without the other letters.
+I changed my code accordingly.
+
+Problem 7:
+
+1.3223416174746196
+
+Problem 8:
+
+moderate
+
+Collaboration:
+
+none
