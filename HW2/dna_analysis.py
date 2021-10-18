@@ -48,6 +48,7 @@ def filename_to_string(dna_filename):
     inputfile.close()
     return seq
 
+
 # Function to return GC Classification
 
 def classify(gc_content):
@@ -59,11 +60,13 @@ def classify(gc_content):
         classification = "moderate"
     return classification
 
+
 ###########################################################################
 # Main program begins here
 #
 
 # Check if the user provided an argument
+
 if len(sys.argv) < 2:
     print("You must supply a file name as an argument when running this "
           "program.")
