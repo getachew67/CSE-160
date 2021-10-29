@@ -109,3 +109,37 @@ def alarm_clock(day, vacation):
             return "off"
         elif day == 1 or day == 2 or day == 3 or day == 4 or day == 5:
             return "10:00"
+
+
+# Given an array of ints, return True if 6 appears as either the first or
+# last element in the array. The array will be length 1 or more.
+
+# first_last6([1, 2, 6]) → True
+# first_last6([6, 1, 2, 3]) → True
+# first_last6([13, 6, 1, 2, 3]) → False
+
+
+def first_last6(nums):
+    if nums[0] == 6:
+        return True
+    elif nums[len(nums) - 1] == 6:
+        return True
+    else:
+        return False
+
+
+# This problem will only make sense after reading the HW3 writeup.
+# Return the sum of all the values in the given pixel_grid.
+# The pixel_grid will always contain at least one value.
+
+# sum_grid([[5, 2, 3], [1, 5, 4]]) → 20
+# sum_grid([[1, 3], [3, 4], [15, 16], [9, 2]]) → 53
+# sum_grid([[100, 50]]) → 150
+
+def sum_grid(pixel_grid):
+    sum = 0
+    for i in pixel_grid:
+        for j in i:
+            sum = sum + j
+    return sum
+    
