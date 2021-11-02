@@ -115,6 +115,11 @@ def read_grid(file_path):
     #     csv_line_to_list(line)
     # blur_file.close()
     # return blur_file
+    grid = []
+    blur_file = open(file_path)
+    for line in blur_file:
+        grid.append(csv_line_to_list(line))
+    return grid
 
 
 def write_grid(file_name, pixel_grid):
@@ -202,24 +207,10 @@ def average_of_surrounding(pixel_grid, i, j):
     Returns the unweighted average of the values of the pixel at row i
     and column j and the eight pixels surrounding it.
     """
-    def exist(pixel_grid, i, j):
-        if i < 0 or j < 0:
-            return 0
-        if i >= len(pixel_grid):
-            return 0
-        if j >= len(pixel_grid[i]):
-            return 0
-        return pixel_grid[i][j]
     pixel_sum = 0
-    pixel_sum += exist(pixel_grid, i - 1, j - 1)
-    pixel_sum += exist(pixel_grid, i - 1, j)
-    pixel_sum += exist(pixel_grid, i - 1, j + 1)
-    pixel_sum += exist(pixel_grid, i, j - 1)
-    pixel_sum += exist(pixel_grid, i, j + 1)
-    pixel_sum += exist(pixel_grid, i + 1, j - 1)
-    pixel_sum += exist(pixel_grid, i + 1, j)
-    pixel_sum += exist(pixel_grid, i + 1, j + 1)
-    pixel_sum += exist(pixel_grid, i, j)
+    for x in [-1, 0, 1]:
+        for y in [-1, 0, 1]:
+            pixel_sum += get_pixel_at(pixel_grid, i - x, j - y)
     return pixel_sum // 9
 
 
@@ -331,16 +322,11 @@ out_image_filename = input_filename + '_blurred.png'
 out_grid_filename = input_filename + '_blurred_grid.txt'
 
 # Step D: Apply the blur algorithm to get a blurred grid
-output = blur(input_grid)
+blurred_grid = blur(input_grid)
 
 # Step E: Write the result to both output files
-file_png = open(out_image_filename, "w")
-file_png.write(str(output))
-file_png.close()
-
-file_txt = open(out_grid_filename, "w")
-file_txt.write(str(output))
-file_txt.close()
+write_image(out_image_filename, blurred_grid)
+write_grid(out_grid_filename, blurred_grid)
 
 
 print("Program done")
@@ -349,4 +335,4 @@ print("Program done")
 # Collaboration
 ###
 
-# ... Write your answer here, as a comment (on lines starting with "#").
+# My cool dad helped me.
