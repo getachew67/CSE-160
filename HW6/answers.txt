@@ -1,0 +1,39 @@
+Name: ...
+CSE 160
+Homework 6
+
+For each problem that requires a written answer, write (or copy-and-paste)
+your answers in this file.  When you are done, you should have replaced all
+the ellipses (the three dots) with your answers.
+
+Answer to Problem 7:
+
+Iranian 2009 election MSE: 0.000739583333333
+Quantity of MSEs larger than or equal to the Iranian 2009 election MSE: 383
+Quantity of MSEs smaller than the Iranian 2009 election MSE: 9617
+Iranian 2009 election null hypothesis rejection level p: 0.9617
+
+My output shows that 9617 of the MSEs were smaller than the 2009 Iranian election MSE
+and 383 were larger or equal. This means that only 3.83% of genuine elections would
+be as different from the uniform distribution as the Iranian election was.
+It is highly unlikely that the Iranian election was genuine. 
+The 2009 Iranaian election null hypothesis rejection p-value is 0.9617, which is 
+more than the 0.05 threshold. We fail to reject the null hypothesis and conclude that
+the election is not fraudulent.
+
+Answer to Problem 8:
+
+2008 United States election MSE: 0.0001410025876058068
+United States 2008 election MSE: 0.0001410025876058068
+Quantity of MSEs larger than or equal to the United States 2008 election MSE: 4850
+Quantity of MSEs smaller than the United States 2008 election MSE: 5150
+United States 2008 election null hypothesis rejection level p: 0.515
+
+We fail to reject the null hypothesis because the p-value (0.515) is greater than
+the threshold 0.05. We conclude that the election was not fraudulent.
+
+Collaboration:
+
+...
+
+
